@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Test Runner</title>
+        <link rel="stylesheet" href="../build/build.css">
+    </head>
+    <body>
+        <div id="mocha"></div>
+        <script src="../build/build.js"></script>
+        <script>
+            require("mocha");
+            mocha.setup("bdd");
+        </script>
+        <script src="test.js"></script>
+        <script>
+            (window.mochaPhantomJS || mocha).run();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Playground</title>
+        <link rel="stylesheet" href="../build/build.css">
+        <style>
+            #test {
+                padding: 3em 15em;
+            }
+
+            .slider {
+                padding: 0 .5em;
+                margin-bottom: 1em;
+                height: 1em;
+            }
+
+            .slider-track {
+                background-color: silver;
+            }
+
+            .slider-range {
+                background-color: yellow;
+            }
+
+            .slider-handle-wrapper {
+                width: 1em;
+                background-color: blue;
+            }
+
+            .slider-handle {
+                height: 2em;
+                width: 2em;
+                position: relative;
+                top: -.5em;
+                left: -.5em;
+                opacity: .5;
+            }
+
+            .slider-handle-wrapper.start .slider-handle {
+                background-color: green;
+            }
+
+            .slider-handle-wrapper.stop .slider-handle {
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+         Value: <span id="value">0</span>
+         <div id="slider"></div>
+
+        <script src="../build/build.js"></script>
+        <script>
+            var Slider = require("slider");
+
+            var slider = Slider("#slider")
+                .max(24)
+                .step(0.25)
+                .handle(function (handle) {
+                    handle.value(6).classes.add("start");
+                })
+                .handle(function (handle) {
+                    handle.value(18).classes.add("stop");
+                });
+
+            var value = document.getElementById("value");
+
+            value.innerText = slider.value();
+
+            slider
+                .on("drag", function () {
+                    value.innerText = this.value();
+                })
+                .on("change", function () {
+                    value.innerText = this.value();
+                });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "slider",
+  "description": "A pure component slider input",
+  "scripts": [
+    "index.js",
+    "lib/slider.js",
+    "lib/handle.js"
+  ],
+  "styles": [
+    "style.css"
+  ],
+  "templates": [
+    "lib/slider.html",
+    "lib/handle.html"
+  ],
+  "dependencies": {
+    "dominicbarnes/classes": "*",
+    "component/domify": "*",
+    "component/each": "*",
+    "component/emitter": "*",
+    "component/events": "*",
+    "component/keyname": "*",
+    "component/map": "*",
+    "component/translate": "*",
+    "ui-component/mouse": "*",
+    "yields/isArray": "*"
+  }
+}
