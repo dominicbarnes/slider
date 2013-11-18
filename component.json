@@ -22,7 +22,7 @@
     "component/keyname": "*",
     "component/map": "*",
     "component/translate": "*",
-    "ui-component/mouse": "*",
+    "dominicbarnes/mouse": "left-click-only",
     "yields/isArray": "*"
   }
 }
