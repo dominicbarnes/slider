@@ -1,0 +1,41 @@
+.slider .slider-track {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.slider .slider-range {
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+}
+.slider .slider-handle-wrapper {
+  position: absolute;
+  z-index: 3;
+  height: 100%;
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+}
+.slider .slider-handle-wrapper.dragging {
+  cursor: move;
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+.slider .slider-handle {
+  z-index: 4;
+}
+.slider .slider-handle:focus {
+  outline: 1px solid red;
+}
+.slider .dragging {
+  z-index: 100;
+}
+.dragging {
+  cursor: move;
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
