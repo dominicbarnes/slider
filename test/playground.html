@@ -51,6 +51,7 @@
         <script src="../build/build.js"></script>
         <script>
             var Slider = require("slider");
+            var text = require("text");
 
             var slider = Slider("#slider")
                 .max(24)
@@ -64,14 +65,14 @@
 
             var value = document.getElementById("value");
 
-            value.innerText = slider.value();
+            text(value, slider.value());
 
             slider
                 .on("drag", function () {
-                    value.innerText = this.value();
+                    text(value, this.value());
                 })
                 .on("change", function () {
-                    value.innerText = this.value();
+                    text(value, this.value());
                 });
         </script>
     </body>

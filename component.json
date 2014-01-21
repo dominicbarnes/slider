@@ -22,7 +22,11 @@
     "component/keyname": "*",
     "component/map": "*",
     "component/translate": "*",
-    "dominicbarnes/mouse": "left-click-only",
-    "yields/isArray": "*"
+    "dominicbarnes/mouse": "ie8_compat",
+    "yields/isArray": "*",
+    "yields/prevent": "*"
+  },
+  "development": {
+    "matthewp/text": "*"
   }
 }
