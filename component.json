@@ -1,5 +1,6 @@
 {
   "name": "slider",
+  "version": "0.0.1",
   "description": "A pure component slider input",
   "scripts": [
     "index.js",
